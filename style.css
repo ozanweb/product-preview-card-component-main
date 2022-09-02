@@ -1,0 +1,198 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+
+/* CSS Reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 100%;
+}
+
+img {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+font: inherit;
+}
+
+/***************************************/
+
+:root {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+ 
+  background-color: hsl(30, 38%, 92%);
+}
+
+body {
+  min-width: 375px;
+  height: 100vh;
+  position: relative;
+
+}
+
+.card {
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  width: 23rem;
+  margin: 0 auto;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  border-radius: .5rem;
+}
+
+
+.mobile {
+  width: 100%;
+  border-radius: .5rem .5rem 0 0;
+}
+
+/** Hides the desktop version of the image **/
+
+.desktop {
+  display: none;
+}
+
+/*******************************************/
+
+.context {
+  padding: 0 1.5rem;
+}
+
+.context span {
+  color: hsl(228, 12%, 48%);
+  font-size: .9rem;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: .25rem;
+  padding: 1.75rem 0 1rem;
+}
+
+.context h1 {
+  font-family: 'Fraunces', sans-serif;
+  padding-bottom: 1.75rem;
+  color: hsl(212, 21%, 14%);
+  font-size: 2.2rem;
+}
+
+.context > p {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.price {
+  color: hsl(158, 36%, 37%);
+  display: block;
+  margin-bottom: .25rem;
+  /* background-color: blue; */
+}
+
+.price p {
+  display: inline-block;
+  /* background-color: yellow; */
+  line-height: 4rem;
+  vertical-align: middle;
+}
+
+.price p:first-of-type {
+  font-family: 'Fraunces', sans-serif;
+  font-size: 2rem;
+  float: left;
+}
+
+.price p:last-of-type {
+  float: left;
+  padding-left: 1rem;
+  text-decoration: line-through;
+}
+
+button[type="button"] {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  padding: 1.25rem 0;
+  margin-bottom: 1.5rem;
+  border-radius: .5rem;
+}
+
+button > i::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  height: 100%;
+  width: 1rem;
+  background-image: url(/images/icon-cart.svg);
+  background-repeat: no-repeat;
+  left: 25%;
+}
+
+button:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+@media screen and (min-width: 800px) {
+
+
+  .card {
+    display: flex;
+    width: 50%;
+  }
+
+  .img-container {
+    position: relative;
+    flex: 50%;
+    overflow: hidden;
+  }
+
+  /* Hides the desktop version of the image */
+
+  .mobile {
+    display: none;
+  }
+
+  /*****************************************/
+
+  .desktop {
+    display: block;
+    height: 100%;
+    background-color: yellow;
+    width: unset;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .context {
+    flex: 50%;
+  }
+
+  button > i::before {
+    left: 20%;
+  }
+
+  @media screen and (min-width: 1025px) {
+    .desktop {
+      left: 0;
+      right: 0;
+      height: unset;
+      width: 100%;
+    }
+  }
+}
