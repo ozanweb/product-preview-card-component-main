@@ -146,16 +146,19 @@ button:hover {
   background-color: hsl(212, 21%, 14%);
 }
 
-@media screen and (min-width: 800px) {
+/* Desktop Styles */
 
+@media screen and (min-width: 800px) {
 
   .card {
     display: flex;
     width: 50%;
+    border-radius: 1rem;
   }
 
   .img-container {
     position: relative;
+    border-radius: 1rem 0 0 1rem;
     flex: 50%;
     overflow: hidden;
   }
