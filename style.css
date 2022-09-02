@@ -137,7 +137,7 @@ button > i::before {
   display: block;
   height: 100%;
   width: 1rem;
-  background-image: url(/images/icon-cart.svg);
+  background-image: url(images/icon-cart.svg);
   background-repeat: no-repeat;
   left: 25%;
 }
